@@ -1,0 +1,56 @@
+@charset "utf-8";
+/*----------------------------------------------------------->
+	Local Resets and Roots
+<------------------------------------------------------------*/
+a, button {
+	text-decoration: none;
+	font-style: inherit;
+	color: inherit;
+}
+
+button {
+	border: none;
+	outline: none;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+/*----------------------------------------------------------->
+	Utility Classes 
+<------------------------------------------------------------*/
+
+.container {
+	width: min(100% - 30px, 1200px);
+	margin-inline: auto;
+}
+
+.flex {
+	display: flex;
+}
+
+.f-col {
+  display: flex;
+	flex-direction: column;
+}
+
+.ease-quick {
+	transition: all 0.3s ease-in-out;
+}
+
+.ease-slow {
+	transition: all 0.8s ease-in-out;
+}
+
+.hidden {
+	display: none;
+	opacity: 0;
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+.pointer {
+	cursor: pointer;
+}
