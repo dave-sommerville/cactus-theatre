@@ -20,6 +20,15 @@ body {
 	Utility Classes 
 <------------------------------------------------------------*/
 
+:root {
+	--clr-background: #fefefe;
+	--clr-primary: #012;
+	--clr-seconardy: #4e2;
+	--clr-accent: #d1b;
+	--app-bdr-rad: 7px;
+	--app-padding: 10px;
+}
+
 .container {
 	width: min(100% - 30px, 1200px);
 	margin-inline: auto;
@@ -53,4 +62,12 @@ body {
 
 .pointer {
 	cursor: pointer;
+}
+
+
+header {
+	height: 40svh;
+	width: 100%;
+	background: var(--clr-background);
+	
 }
