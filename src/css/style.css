@@ -7,6 +7,10 @@ a, button {
 	font-style: inherit;
 	color: inherit;
 }
+li {
+	list-style-type: none;
+	text-decoration: none;
+}
 
 button {
 	border: none;
@@ -25,6 +29,7 @@ body {
 	--clr-primary: #012;
 	--clr-seconardy: #4e2;
 	--clr-accent: #d1b;
+	--clr-text-light: #fefefe;
 	--app-bdr-rad: 7px;
 	--app-padding: 10px;
 }
@@ -66,8 +71,52 @@ body {
 
 
 header {
-	height: 40svh;
+	height: 60svh;
 	width: 100%;
-	background: var(--clr-background);
+	background: var(--clr-background) url('../img/spotlight2.jpg') no-repeat center center;
+	background-size: cover;
+
+	h1 {
+		color: var(--clr-text-light);
+		font-size: 2.2rem;
+	}
+
+	img {
+		height: 280px;
+		width: auto;
+		aspect-ratio: 1 /1;
+	}
+
+	button{
+
+	}
+}
+
+.logo-container {
+	height: 250px;
+	width: 250px;
+	border-radius: 50%;
+	overflow: hidden;
+	align-items: center;
+	justify-content: center;
+}
+
+nav {
 	
+	height: 120px;
+	width: 100%;
+	background-color: var(--clr-seconardy);
+
+	ul {
+		height: 120px;
+
+		li {
+			line-height: 120px;
+		}
+	}
+	img {
+		height: 100px;
+		width: 100px;
+
+	}
 }
