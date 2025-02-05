@@ -1,4 +1,13 @@
 @charset "utf-8";
+/*
+	- Choosing domain name
+	- Needs new font
+	- Email and social links
+	- Responsiveness
+	- Program layout
+	- About us layout
+	- Colour pallete 
+*/
 /*----------------------------------------------------------->
 	Local Resets and Roots
 <------------------------------------------------------------*/
@@ -18,6 +27,7 @@ button {
 }
 
 body {
+	font-family: "Poppins";
 	background-color: var(--clr-background);
   scroll-behavior: smooth;
 }
@@ -106,14 +116,19 @@ header {
 	}
 }
 
-	button {
+button {
 		margin: 10px;
 		height: 50px;
 		width: 120px;
 		border-radius: var(--app-bdr-rad);
 		font-size: 1rem;
+		background-color: var(--clr-accent);
+		transition: all 0.25s ease-in-out;
 }
 
+button:hover {
+	filter: brightness(0.7);
+}
 
 .logo-container {
 	height: 250px;
@@ -129,11 +144,11 @@ header {
 
 .nav-wrapper {
 	width: 100%;
-	height: 50px;
+	height: 80px;
 	justify-content: center;
 	background: var(--app-gradient);
   backdrop-filter: blur(5px) brightness(0.4);
-	transform: translateY(-100%); /* Catch before Andre does */
+	transform: translateY(-100%);
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -147,52 +162,52 @@ header {
 
 nav {
 	width: 100%;
-	height: 50px;
+	height: 80px;
+	align-items: center;
 	position: relative;
-	padding: 0 var(--app-spacing);
 	justify-content: space-between;
   color: var(--clr-primary);
+	h3 {
+		font-size: 2.4rem;
+		color: var(--clr-text-light);
+	}
 }
 
-.burger { 
-  height: 50px;
-  display: none;
-  position: absolute;
-  right: 0;
-  &:hover {
-    filter: brightness(1.2);
-  }
-
-  i {
-    line-height: 50px;
-    color: var(--clr-primary);
-  }
+.small-logo-wrapper {
+	height: 100%;
+	border-radius: 50%;
+	overflow: hidden;
+	img {
+		height: 100%;
+		aspect-ratio: 1 / 1;
+	}
 }
-
 
 .link-wrapper {
-  width: 300px;
+  width: 550px;
+	align-items: center;
   justify-content: space-between;
-  position: absolute;
-  right: 0;
   transition: all 0.5s ease-in-out;
 
   a {
   font-size: 1.6rem;
   transition: all 0.25s ease-in-out;
+	color: var(--clr-text-light);
 
-
-  &:hover {
-    backdrop-filter: brightness(1.2);
-  }
+  	&:hover {
+    	backdrop-filter: brightness(1.2);
+  	}
   }
 }
 
-.link-wrapper.visible {
-  width: 240px;
-}
 
-
-.play-preview {
+.program {
 	height: 120svh;
+	img {
+		height: 400px;
+		width: 350px;
+	}
+	div {
+		padding: 8px;
+	}
 }
