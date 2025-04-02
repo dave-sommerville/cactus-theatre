@@ -23,6 +23,7 @@ const heroBanner = select(".hero-banner");
 const headerSwitch = heroBanner.offsetHeight;
 const linkWrapper = select('.link-wrapper');
 const navTitle = select('h3');
+const sections = selectAll('.expanding-container');
 
 /*----------------------------------------------------------->
 	Listeners 
@@ -38,7 +39,16 @@ listen("scroll", window, () => {
 	}
 });
 
-listen('click', burgerMenu, () => {
-	linkWrapper.classList.toggle("visible");
-  navTitle.classList.toggle("visible");
+// listen('click', burgerMenu, () => {
+// 	linkWrapper.classList.toggle("visible");
+//   navTitle.classList.toggle("visible");
+// });
+
+sections.forEach(section => {
+		listen("click", section, () => {
+			sections.forEach(s => {
+				if(s != section) s.classList.remove("expanded");
+			});
+section.classList.toggle("expanded");
+		});
 });
