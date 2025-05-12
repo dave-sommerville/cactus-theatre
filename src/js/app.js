@@ -23,8 +23,7 @@ const heroBanner = select(".hero-banner");
 const headerSwitch = heroBanner.offsetHeight;
 const linkWrapper = select('.link-wrapper');
 const navTitle = select('h3');
-const sections = selectAll('.expanding-container');
-
+const container = select(".scroll-container");
 /*----------------------------------------------------------->
 	Listeners 
 <-----------------------------------------------------------*/
@@ -44,11 +43,4 @@ listen("scroll", window, () => {
 //   navTitle.classList.toggle("visible");
 // });
 
-sections.forEach(section => {
-		listen("click", section, () => {
-			sections.forEach(s => {
-				if(s != section) s.classList.remove("expanded");
-			});
-section.classList.toggle("expanded");
-		});
-});
+container.scrollTop = container.scrollHeight;

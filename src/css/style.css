@@ -1,12 +1,15 @@
 @charset "utf-8";
 /*
-	- Choosing domain name
-	- Needs new font
-	- Email and social links
-	- Responsiveness
-	- Program layout
-	- About us layout
-	- Colour pallete 
+	- Adjust the logo/page title
+	- Create seconardy header
+	- 
+	- Default/Control box 
+	  - Font
+		- Color Pallete
+		- Spacing
+		- Program Content
+		- Button (primary and secondary)
+		- Layout sections
 */
 /*----------------------------------------------------------->
 	Local Resets and Roots
@@ -29,21 +32,20 @@ button {
 body {
 	font-family: "Poppins";
 	background-color: var(--clr-background);
-  scroll-behavior: smooth;
 }
 /*----------------------------------------------------------->
 	Utility Classes 
 <------------------------------------------------------------*/
 
 :root {
-	--clr-background: #fefefe;
+	--clr-background: #151a15;
 	--clr-primary: #012;
 	--clr-seconardy: #4e2;
 	--clr-accent: #d1b;
 	--clr-text-light: #fefefe;
 	--clr-text-dark: #012;
 	--app-bdr-rad: 7px;
-	--app-padding: 10px;
+	--app-padding: 30px;
 }
 
 .container {
@@ -200,20 +202,23 @@ nav {
   }
 }
 
-
-.expanding-content {
-	background: #f0f0f0;
-	margin: 10px 0;
-	padding: 10px;
-	cursor: pointer;
-	border-radius: 8px;
-	transition: all 0.3s ease;
+.program {
+	height: 100svh;
+	padding: var(--app-padding);
+	background-color: antiquewhite;
+	overflow-y: scroll;
+	h2, h4 {
+		text-align: center;
+	}
+	h2 {
+		font-size: 3rem;
+	}
+	button {
+		margin: 0 auto;
+	}
 }
-.content {
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height 0.3s ease;
-}
-.expanded .content {
-	max-height: 200px;
+.program-wrapper {
+	div {
+		width: 50%;
+	}
 }
