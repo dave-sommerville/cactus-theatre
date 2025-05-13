@@ -24,21 +24,27 @@ li {
 	text-decoration: none;
 }
 
-button {
-	border: none;
-	outline: none;
-}
+
 
 body {
 	font-family: "Poppins";
 	background-color: var(--clr-background);
+	height: 100svh;
+	overflow-y: hidden;
+}
+
+.scroll-wrapper {
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	height: 100svh;
+	scroll-behavior: smooth;
 }
 /*----------------------------------------------------------->
 	Utility Classes 
 <------------------------------------------------------------*/
 
 :root {
-	--clr-background: #151a15;
+	--clr-background: #30378b;
 	--clr-primary: #012;
 	--clr-seconardy: #4e2;
 	--clr-accent: #d1b;
@@ -83,16 +89,22 @@ body {
 	cursor: pointer;
 }
 
+button {
+	border: none;
+	outline: none;
+}
 
 header {
 	height: 60svh;
 	width: 100%;
-	background: var(--clr-background) url('../img/spotlight2.jpg') no-repeat center bottom;
-	background-size: cover;
+	background: url('../img/cactus-logo-bg.PNG') no-repeat center bottom;
+	background-size: contain;
 	position:relative;
 	filter: brightness(0.8);
 	justify-content: center;
 	align-items: center;
+	scroll-snap-align: start;
+
 
 	h1 {
 		height: 10svh;
@@ -201,9 +213,11 @@ nav {
   	}
   }
 }
-
-.program {
+.scroll-child {
 	height: 100svh;
+	scroll-snap-align: start;
+}
+.program {
 	padding: var(--app-padding);
 	background-color: antiquewhite;
 	overflow-y: scroll;

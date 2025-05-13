@@ -27,20 +27,33 @@ const container = select(".scroll-container");
 /*----------------------------------------------------------->
 	Listeners 
 <-----------------------------------------------------------*/
+const scrollWrapper = document.querySelector('.scroll-wrapper');
 
-listen("scroll", window, () => {
-	const trigger = window.scrollY;
+scrollWrapper.addEventListener('scroll', () => {
+  const { scrollTop, scrollHeight, clientHeight } = scrollWrapper;
 
-	if (trigger > headerSwitch) {
-		navBar.classList.add("visible");
-	} else {
-		navBar.classList.remove("visible");
-	}
+  const isAtBottom = scrollTop + clientHeight >= scrollHeight - 100;
+
+  if (isAtBottom) {
+    navBar.classList.add('visible');
+  } else {
+    navBar.classList.remove('visible');
+  }
 });
+
+
+// listen("scroll", window, () => {
+// 	const trigger = window.scrollY;
+
+// 	if (trigger >= (headerSwitch - 15)) {
+// 		navBar.classList.add("visible");
+// 	} else {
+// 		navBar.classList.remove("visible");
+// 	}
+// });
 
 // listen('click', burgerMenu, () => {
 // 	linkWrapper.classList.toggle("visible");
 //   navTitle.classList.toggle("visible");
 // });
 
-container.scrollTop = container.scrollHeight;
