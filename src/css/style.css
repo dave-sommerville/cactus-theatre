@@ -95,7 +95,7 @@ button {
 }
 
 header {
-	height: 60svh;
+	height: 40svh;
 	width: 100%;
 	background: url('../img/cactus-logo-bg.PNG') no-repeat center bottom;
 	background-size: contain;
@@ -159,15 +159,18 @@ button:hover {
 .nav-wrapper {
 	width: 100%;
 	height: 80px;
-	justify-content: center;
-	background: var(--app-gradient);
-  backdrop-filter: blur(5px) brightness(0.4);
+	padding: 5px 0;
+	background-color: antiquewhite;
 	transform: translateY(-100%);
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 5000; 
   transition: all 0.5s ease-in-out;
+	div {
+		height: 80px;
+		align-items: center;
+	}
 }
 
 .nav-wrapper.visible {
@@ -183,11 +186,11 @@ nav {
   color: var(--clr-primary);
 	h3 {
 		font-size: 2.4rem;
-		color: var(--clr-text-light);
 	}
 }
 
 .small-logo-wrapper {
+	margin-right: var(--app-padding);
 	height: 100%;
 	border-radius: 50%;
 	overflow: hidden;
@@ -206,7 +209,6 @@ nav {
   a {
   font-size: 1.6rem;
   transition: all 0.25s ease-in-out;
-	color: var(--clr-text-light);
 
   	&:hover {
     	backdrop-filter: brightness(1.2);
