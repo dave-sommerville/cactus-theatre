@@ -1,15 +1,15 @@
 @charset "utf-8";
 /*
-	- Adjust the logo/page title
-	- Create seconardy header
-	- 
-	- Default/Control box 
-	  - Font
-		- Color Pallete
-		- Spacing
-		- Program Content
-		- Button (primary and secondary)
-		- Layout sections
+	- Change layout and add photos to program (prep for cast and dates)
+	- Fix up catus PNG, possibly adding parallax
+	- Establish color roots (hoping change from antique white)
+	- Format about page 
+	  - Copy of Nav (no javascript)
+		- Main padding/layout/color
+	- Create and format contact us page
+	  - Copy of Nav (no javascript)
+  - Responsiveness
+
 */
 /*----------------------------------------------------------->
 	Local Resets and Roots
@@ -94,13 +94,12 @@ button {
 	outline: none;
 }
 
-header {
+.hero-banner {
 	height: 40svh;
 	width: 100%;
 	background: url('../img/cactus-logo-bg.PNG') no-repeat center bottom;
 	background-size: contain;
 	position:relative;
-	filter: brightness(0.8);
 	justify-content: center;
 	align-items: center;
 	scroll-snap-align: start;
@@ -161,16 +160,18 @@ button:hover {
 	height: 80px;
 	padding: 5px 0;
 	background-color: antiquewhite;
-	transform: translateY(-100%);
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 5000; 
-  transition: all 0.5s ease-in-out;
 	div {
 		height: 80px;
 		align-items: center;
 	}
+}
+.nav-wrapper.one{
+	transform: translateY(-100%);
+  transition: all 0.5s ease-in-out;
 }
 
 .nav-wrapper.visible {
@@ -201,15 +202,13 @@ nav {
 }
 
 .link-wrapper {
-  width: 550px;
+  width: 320px;
 	align-items: center;
   justify-content: space-between;
   transition: all 0.5s ease-in-out;
-
   a {
   font-size: 1.6rem;
   transition: all 0.25s ease-in-out;
-
   	&:hover {
     	backdrop-filter: brightness(1.2);
   	}
@@ -237,4 +236,10 @@ nav {
 	div {
 		width: 50%;
 	}
+}
+.about-main {
+	height: 100%;
+	padding: 200px var(--app-padding);
+	background-color: antiquewhite;
+	overflow-y: scroll;
 }
