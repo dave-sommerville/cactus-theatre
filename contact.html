@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Dave Sommerville">
+  <meta name="description" content="Dave Sommerville | Fullstack Web Developer">
+  <meta name="theme-color" content="#ffffff">
+  <title>Cactus Theatre Co.</title>
+  <link rel="icon" href="./src/img/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="./src/css/reset.css" media="all">
+  <link rel="stylesheet" href="./src/css/style.css" media="all">
+  <script src="./src/js/app.js" defer></script>  
+</head>
+<body>
+    <header class="nav-wrapper">
+      <nav class="container flex">
+        <div class="flex">
+          <div class="small-logo-wrapper">
+            <img src="./src/img/cactus-logo.JPG">
+          </div>
+          <h3>
+            Cactus Theatre Co.
+          </h3>
+        </div>
+        <div class="link-wrapper flex">
+          <a href="./about" class="pointer">
+            About
+          </a>
+          <a href="mailto:cactustheatreco@gmail.com" class="pointer">
+            Contact
+          </a>
+          <a href="https://www.facebook.com/share/15sBvcSryf/?mibextid=wwXIfr" class="pointer">
+            <i class="fa-brands fa-square-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/cactus.theatre.co?igsh=MTQ5ZDQ5azZiZmowNw==" class="pointer">
+            <i class="fa-brands fa-square-instagram"></i>
+          </a>
+        </div>
+      </nav>
+  </header>
+  <main class="container about-main f-col">
+    <form class="message" name="contact" method="POST" data-netlify="true">
+      <h5>Send Me a Message</h5>
+      <input type="hidden" name="form-name" value="contact">
+      <input type="text" name="name" placeholder="NAME" required><br><br>
+      <input type="email" name="email" placeholder="EMAIL" required><br><br>
+      <textarea name="message" rows="6" placeholder="SAY SOMETHING" required></textarea></label><br><br>
+      <button type="submit" class="btn pointer hover">Send Message</button>
+    </form>
+  </main>
+</body>
+</html>

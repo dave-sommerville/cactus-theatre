@@ -52,6 +52,8 @@ body {
 	--clr-text-dark: #012;
 	--app-bdr-rad: 7px;
 	--app-padding: 30px;
+	--app-large-padding: 150px;
+	--app-border-rad: 8px;
 }
 
 .container {
@@ -239,7 +241,32 @@ nav {
 }
 .about-main {
 	height: 100%;
-	padding: 200px var(--app-padding);
 	background-color: antiquewhite;
 	overflow-y: scroll;
+	justify-content: center;
+	align-items: center;
+	p {
+		margin: 0 var(--app-large-padding);
+	}
+}
+.dan-photo {
+	width: 300px;
+	aspect-ratio: 1/1;
+	margin-right: var(--app-large-padding);
+	margin-bottom: var(--app-padding);
+}
+.message {
+	width: 500px;
+	input {
+		width: 100%;
+		height: 60px;
+		font-size: 1.4rem;
+		border-radius: var(--app-border-rad);
+	}
+	textarea {
+		font-size: 1.2rem;
+		width: 100%;
+		height: 400px;
+		resize: none;
+	}
 }
