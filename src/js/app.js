@@ -24,12 +24,14 @@ const headerSwitch = heroBanner.offsetHeight;
 const linkWrapper = select('.link-wrapper');
 const navTitle = select('h3');
 const container = select(".scroll-container");
+const menuToggle = select('.burger-menu');
+const menuDropDown = select('.link-wrapper');
 /*----------------------------------------------------------->
 	Listeners 
 <-----------------------------------------------------------*/
-const scrollWrapper = document.querySelector('.scroll-wrapper');
+const scrollWrapper = select('.scroll-wrapper');
 
-scrollWrapper.addEventListener('scroll', () => {
+listen('scroll', scrollWrapper, () => {
   const { scrollTop, scrollHeight, clientHeight } = scrollWrapper;
 
   const isAtBottom = scrollTop + clientHeight >= scrollHeight - 100;
@@ -41,6 +43,9 @@ scrollWrapper.addEventListener('scroll', () => {
   }
 });
 
+listen('click', menuToggle, ()=>{
+  menuDropDown.classList.toggle('visible');
+});
 
 // listen("scroll", window, () => {
 // 	const trigger = window.scrollY;
