@@ -250,12 +250,13 @@ main {
 	overflow-y: scroll;
 	justify-content: center;
 	align-items: center;
+	padding: var(--app-large-padding);
 }
 .dan-photo {
+	float: right;
 	width: 300px;
 	aspect-ratio: 1/1;
-	margin-right: var(--app-large-padding);
-	margin-bottom: var(--app-padding);
+	margin: var(--app-padding) 0;
 }
 .message {
 	width: min(100% - 30px, 500px);
@@ -310,6 +311,9 @@ main {
 	}
 }
 @media (max-width: 550px) {
+	main {
+		padding: 0;
+	}
 	.program-wrapper {
 		flex-direction: column;
 	}
