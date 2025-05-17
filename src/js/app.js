@@ -1,5 +1,4 @@
 'use strict';
-'use strict';
 /*----------------------------------------------------------->
 	Utility Functions
 <------------------------------------------------------------*/
@@ -25,7 +24,6 @@ const linkWrapper = select('.link-wrapper');
 const navTitle = select('h3');
 const container = select(".scroll-container");
 const menuToggle = select('.burger-menu');
-const menuDropDown = select('.link-wrapper');
 /*----------------------------------------------------------->
 	Listeners 
 <-----------------------------------------------------------*/
@@ -44,7 +42,7 @@ listen('scroll', scrollWrapper, () => {
 });
 
 listen('click', menuToggle, ()=>{
-  menuDropDown.classList.toggle('visible');
+  linkWrapper.classList.toggle('visible');
 });
 
 // listen("scroll", window, () => {
