@@ -17,12 +17,10 @@ li {
 body {
 	font-family: "Poppins";
 	background-color: var(--clr-background);
-	height: 100svh;
-	overflow-y: hidden;
+	overflow-y: scroll;
 }
 
 .scroll-wrapper {
-	scroll-snap-type: y mandatory;
 	overflow-y: scroll;
 	height: 100svh;
 	scroll-behavior: smooth;
@@ -165,7 +163,7 @@ button:hover {
 
 .nav-wrapper {
 	width: 100%;
-	height: 80px;
+	height: 8svh;
 	background-color: antiquewhite;
 	position: fixed;
 	top: 0;
@@ -188,7 +186,7 @@ button:hover {
 
 nav {
 	width: 100%;
-	height: 80px;
+	height: 8svh;
 	padding: 0 var(--app-padding);
 	align-items: center;
 	position: relative;
@@ -228,8 +226,9 @@ nav {
 }
 .program {
 	padding: var(--app-padding);
+	padding-top: 5svh;
 	background-color: antiquewhite;
-	overflow-y: scroll;
+	height: 100svh;
 	h2, h4 {
 		text-align: center;
 	}
@@ -245,12 +244,13 @@ nav {
 	gap: 10px;
 }
 main {
-	height: 100%;
 	background-color: antiquewhite;
-	overflow-y: scroll;
 	justify-content: center;
 	align-items: center;
-	padding: var(--app-large-padding);
+}
+.about-main {
+	height: 100svh;
+	padding-top: 10svh;
 }
 .dan-photo {
 	float: right;
