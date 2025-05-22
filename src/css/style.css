@@ -250,7 +250,7 @@ main {
 }
 .about-main {
 	height: 100svh;
-	padding-top: 10svh;
+	padding: 10svh 50px 0 50px;
 }
 .dan-photo {
 	float: right;
