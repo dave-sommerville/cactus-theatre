@@ -55,7 +55,6 @@ body {
   display: flex;
 	flex-direction: column;
 }
-
 .ease-quick {
 	transition: all 0.3s ease-in-out;
 }
@@ -107,8 +106,6 @@ button {
 	justify-content: center;
 	align-items: center;
 	scroll-snap-align: start;
-
-
 	h1 {
 		height: 10svh;
 		line-height: 10svh;
@@ -125,7 +122,6 @@ button {
 		font-weight: 600;;
 		color: var(--clr-text-light);
 	}
-
 	img {
 		height: 280px;
 		width: auto;
@@ -244,13 +240,12 @@ nav {
 	gap: 10px;
 }
 main {
-	background-color: antiquewhite;
-	justify-content: center;
+	background-color: #faebd7;
 	align-items: center;
 }
 .about-main {
 	height: 100svh;
-	padding: 10svh 50px 0 50px;
+	padding: 15svh 50px;
 }
 .dan-photo {
 	float: right;
@@ -279,7 +274,7 @@ main {
 
 @media (max-width: 1200px) {
 	body{ 
-		background-color: antiquewhite;
+		background-color: #faebd7;
 	}
 }
 
@@ -336,8 +331,8 @@ main {
 		flex-direction: column;
 		position: absolute;
 		right: 0;
-		top: 80px;
-		background-color: antiquewhite;
+		top: 8svh;
+		background-color: #faebd7;
 		padding: 0 var(--app-padding);
 		display: none;
 	}
