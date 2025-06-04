@@ -25,6 +25,7 @@ const navTitle = select('h3');
 const container = select(".scroll-container");
 const menuToggle = select('.burger-menu');
 const castButton = select('.cast-btn');
+const castDisplay = select('.cast');
 const jordanArticle = select('.jordan');
 const jordanButton = select('.jordan-btn');
 const hopeArticle = select('.hope');
@@ -54,12 +55,50 @@ listen('scroll', scrollWrapper, () => {
 listen('click', menuToggle, ()=>{
   linkWrapper.classList.toggle('visible');
 });
+const display = select('#display');
+
+listen('click', castButton, () => {
+  if(!castDisplay.classList.contains('collapse')) {
+    castDisplay.classList.add('collapse');
+  } else {
+    castDisplay.classList.remove('collapse');
+    document.getElementById("display").scrollIntoView({ behavior: "smooth" });
+  }
+});
 
 listen('click', jordanButton, () => {
   if(!jordanArticle.classList.contains('collapse')) {
     jordanArticle.classList.add('collapse');
   } else {
     jordanArticle.classList.remove('collapse');
+  }
+});
+listen('click', hopeButton, () => {
+  if(!hopeArticle.classList.contains('collapse')) {
+    hopeArticle.classList.add('collapse');
+  } else {
+    hopeArticle.classList.remove('collapse');
+  }
+});
+listen('click', natalieButton, () => {
+  if(!natalieArticle.classList.contains('collapse')) {
+    natalieArticle.classList.add('collapse');
+  } else {
+    natalieArticle.classList.remove('collapse');
+  }
+});
+listen('click', connorButton, () => {
+  if(!connorArticle.classList.contains('collapse')) {
+    connorArticle.classList.add('collapse');
+  } else {
+    connorArticle.classList.remove('collapse');
+  }
+});
+listen('click', shaneButton, () => {
+  if(!shaneArticle.classList.contains('collapse')) {
+    shaneArticle.classList.add('collapse');
+  } else {
+    shaneArticle.classList.remove('collapse');
   }
 });
 // listen("scroll", window, () => {
