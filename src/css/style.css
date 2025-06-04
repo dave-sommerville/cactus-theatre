@@ -410,4 +410,7 @@ main {
 	.dates-wrapper {
 		width: 260px;
 	}
+	.cast p, .crew p {
+		width: 300px;
+	}
 }
