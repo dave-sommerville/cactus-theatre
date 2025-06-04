@@ -24,6 +24,18 @@ const linkWrapper = select('.link-wrapper');
 const navTitle = select('h3');
 const container = select(".scroll-container");
 const menuToggle = select('.burger-menu');
+const castButton = select('.cast-btn');
+const jordanArticle = select('.jordan');
+const jordanButton = select('.jordan-btn');
+const hopeArticle = select('.hope');
+const hopeButton = select('.hope-btn');
+const connorArticle = select('.connor');
+const connorButton = select('.connor-btn');
+const natalieArticle = select('.natalie');
+const natalieButton = select('.natalie-btn');
+const shaneArticle = select('.shane');
+const shaneButton = select('.shane-btn');
+
 /*----------------------------------------------------------->
 	Listeners 
 <-----------------------------------------------------------*/
@@ -31,9 +43,7 @@ const scrollWrapper = select('.scroll-wrapper');
 
 listen('scroll', scrollWrapper, () => {
   const { scrollTop, scrollHeight, clientHeight } = scrollWrapper;
-
   const isAtBottom = scrollTop + clientHeight >= scrollHeight - 100;
-
   if (isAtBottom) {
     navBar.classList.add('visible');
   } else {
@@ -45,6 +55,13 @@ listen('click', menuToggle, ()=>{
   linkWrapper.classList.toggle('visible');
 });
 
+listen('click', jordanButton, () => {
+  if(!jordanArticle.classList.contains('collapse')) {
+    jordanArticle.classList.add('collapse');
+  } else {
+    jordanArticle.classList.remove('collapse');
+  }
+});
 // listen("scroll", window, () => {
 // 	const trigger = window.scrollY;
 
