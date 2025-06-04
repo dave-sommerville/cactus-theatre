@@ -26,6 +26,8 @@ const container = select(".scroll-container");
 const menuToggle = select('.burger-menu');
 const castButton = select('.cast-btn');
 const castDisplay = select('.cast');
+const crewDisplay = select('.crew');
+const crewButton = select('.crew-btn');
 const jordanArticle = select('.jordan');
 const jordanButton = select('.jordan-btn');
 const hopeArticle = select('.hope');
@@ -36,6 +38,24 @@ const natalieArticle = select('.natalie');
 const natalieButton = select('.natalie-btn');
 const shaneArticle = select('.shane');
 const shaneButton = select('.shane-btn');
+const stephButton = select('.steph-btn');
+const stephArticle = select('.steph');
+const alisonButton = select('.alison-btn');
+const alisonArticle = select('.alison-');
+const juliaButton = select('.julia-btn');
+const juliaArticle = select('.julia');
+const heatherButton = select('.heather-btn');
+const heatherArticle = select('.heather');
+const bernardButton = select('.bernard-btn');
+const bernardArticle = select('.bernard');
+const davepButton = select('.davep-btn');
+const davepArticle = select('.davep');
+const rickButton = select('.rick-btn');
+const rickArticle = select('.rick');
+const chantalButton = select('.chantal-btn');
+const chantalArticle = select('.chantal');
+const davesButton = select('.daves-btn');
+const davesArticle = select('.daves');
 
 /*----------------------------------------------------------->
 	Listeners 
@@ -51,18 +71,38 @@ listen('scroll', scrollWrapper, () => {
     navBar.classList.remove('visible');
   }
 });
+let castIsOpen = false;
+let crewIsOpen = false;
 
 listen('click', menuToggle, ()=>{
   linkWrapper.classList.toggle('visible');
 });
-const display = select('#display');
 
 listen('click', castButton, () => {
   if(!castDisplay.classList.contains('collapse')) {
     castDisplay.classList.add('collapse');
+    castIsOpen = false;
   } else {
     castDisplay.classList.remove('collapse');
-    document.getElementById("display").scrollIntoView({ behavior: "smooth" });
+    castIsOpen = true;
+    if(crewIsOpen) {
+      crewDisplay.classList.add('collapse');
+    }
+    castDisplay.scrollIntoView({ behavior: "smooth" });
+  }
+});
+
+listen('click', crewButton, () => {
+  if(!crewDisplay.classList.contains('collapse')) {
+    crewDisplay.classList.add('collapse');
+    crewIsOpen = false;
+  } else {
+    crewDisplay.classList.remove('collapse');
+    crewIsOpen = true;
+    if(castIsOpen) {
+      castDisplay.classList.add('collapse');
+    }
+    crewDisplay.scrollIntoView({ behavior: "smooth" });
   }
 });
 
@@ -101,6 +141,70 @@ listen('click', shaneButton, () => {
     shaneArticle.classList.remove('collapse');
   }
 });
+listen('click', stephButton, () => {
+  if(!stephArticle.classList.contains('collapse')) {
+    stephArticle.classList.add('collapse');
+  } else {
+    stephArticle.classList.remove('collapse');
+  }
+});
+listen('click', alisonButton, () => {
+  if(!alisonArticle.classList.contains('collapse')) {
+    alisonArticle.classList.add('collapse');
+  } else {
+    alisonArticle.classList.remove('collapse');
+  }
+});
+listen('click', juliaButton, () => {
+  if(!juliaArticle.classList.contains('collapse')) {
+    juliaArticle.classList.add('collapse');
+  } else {
+    juliaArticle.classList.remove('collapse');
+  }
+});
+listen('click', heatherButton, () => {
+  if(!heatherArticle.classList.contains('collapse')) {
+    heatherArticle.classList.add('collapse');
+  } else {
+    heatherArticle.classList.remove('collapse');
+  }
+});
+listen('click', bernardButton, () => {
+  if(!bernardArticle.classList.contains('collapse')) {
+    bernardArticle.classList.add('collapse');
+  } else {
+    bernardArticle.classList.remove('collapse');
+  }
+});
+listen('click', davepButton, () => {
+  if(!davepArticle.classList.contains('collapse')) {
+    davepArticle.classList.add('collapse');
+  } else {
+    davepArticle.classList.remove('collapse');
+  }
+});
+listen('click', rickButton, () => {
+  if(!rickArticle.classList.contains('collapse')) {
+    rickArticle.classList.add('collapse');
+  } else {
+    rickArticle.classList.remove('collapse');
+  }
+});
+listen('click', chantalButton, () => {
+  if(!chantalArticle.classList.contains('collapse')) {
+    chantalArticle.classList.add('collapse');
+  } else {
+    chantalArticle.classList.remove('collapse');
+  }
+});
+listen('click', davesButton, () => {
+  if(!davesArticle.classList.contains('collapse')) {
+    davesArticle.classList.add('collapse');
+  } else {
+    davesArticle.classList.remove('collapse');
+  }
+});
+
 // listen("scroll", window, () => {
 // 	const trigger = window.scrollY;
 

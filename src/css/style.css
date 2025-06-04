@@ -97,7 +97,7 @@ button {
 	outline: none;
 }
 h4, h5 {
-	margin: 25px 0;
+	margin-bottom: 25px;
 }
 .hero-banner {
 	height: 40svh;
@@ -261,7 +261,7 @@ main {
 	margin: 50px 0;
 }
 
-.cast {
+.cast, .crew {
 	transition: all 0.5s ease-in-out;
 	figcaption {
 		font-size: 1.6rem;
@@ -270,8 +270,10 @@ main {
 	figure {
 	width: 100%;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	margin: 50px 0;
+	cursor: pointer;
 	}
 	img {
 		width: 400px;
@@ -280,22 +282,25 @@ main {
 		width: 400px;
 	}
 }
-
-.jordan, .hope, .natalie, .connor, .shane {
+.jordan, .hope, .natalie, .connor, .shane, 
+.steph, .alison, .julia, .heather, .bernard, .davep, .rick, .chantal, .daves {
 	height: 600px;
 	overflow: hidden;
 	transition: all 0.5s ease-in-out;
 }
-.jordan.collapse, .hope.collapse, .natalie.collapse, .connor.collapse, .shane.collapse {
+.jordan.collapse, .hope.collapse, .natalie.collapse, .connor.collapse, .shane.collapse,
+.steph.collapse, .alison.collapse, .julia.collapse, .heather.collapse,
+.bernard.collapse, .davep.collapse, .rick.collapse, .chantal.collapse, .daves.collapse
+ {
 	height: 0;
 }
-.cast {
+.cast, .crew {
 	transform: translateY(0);
 	overflow: hidden;
 	/* height: 400px; */
 }
 
-.cast.collapse {
+.cast.collapse, .crew.collapse {
 	height: 0;
 }
 
