@@ -126,7 +126,7 @@ h4, h5 {
 	}
 }
 
-button {
+button, .memory-link {
 		margin: 50px;
 		height: 50px;
 		width: fit-content;
@@ -272,6 +272,20 @@ main {
 		width: 400px;
 	}
 }
+.memories {
+	figure {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	figcaption {
+		width: 500px;
+		margin: 25px 0;
+		text-align: center;
+	}
+}
 .jordan, .hope, .natalie, .connor, .shane, 
 .steph, .alison, .julia, .heather, .bernard, .davep, .rick, .chantal, .daves {
 	height: 600px;
@@ -344,13 +358,24 @@ main {
 	body{ 
 		background-color: #faebd7;
 	}
+	nav {
+		h3 {
+			font-size: 1.7;
+		}
+	}
+	.link-wrapper  {
+		width: 250px;
+		a {
+			font-size: 1.4rem;
+		}
 }
 
 @media (max-width: 850px) {
-	nav h3 {
-		font-size: 2rem;
+	nav {
+		h3 {
+			font-size: 1.7rem;
+		}
 	}
-
 	.link-wrapper  {
 		width: 250px;
 			a {
@@ -366,7 +391,7 @@ main {
 	nav {
 		padding: 0;
 	 	h3 {
-			font-size: 1.6rem;
+			font-size: 1.4rem;
 		}
 	}
 	.photo-columns {
@@ -383,7 +408,7 @@ main {
 	height: 1000px;
 	}
 }
-@media (max-width: 550px) {
+@media (max-width: 620px) {
 	main {
 		padding: 0;
 	}
@@ -391,7 +416,7 @@ main {
 		flex-direction: column;
 	}
 	nav h3 {
-		font-size: 1.4rem;
+		font-size: 1.3rem;
 	}
 	.small-logo-wrapper {
 		margin-right: 5px;
@@ -427,4 +452,4 @@ main {
 		column-count: 2;
 	}
 }
-
+}

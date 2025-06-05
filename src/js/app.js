@@ -100,6 +100,7 @@ listen('click', jordanButton, () => {
     jordanArticle.classList.add('collapse');
   } else {
     jordanArticle.classList.remove('collapse');
+    jordanArticle.scrollIntoView({ behavior: "smooth" });
   }
 });
 listen('click', hopeButton, () => {
@@ -128,6 +129,10 @@ listen('click', shaneButton, () => {
     shaneArticle.classList.add('collapse');
   } else {
     shaneArticle.classList.remove('collapse');
+    window.scrollTo({
+      top: shaneButton.offsetBottom,
+      behavior: "smooth" // optional
+    });
   }
 });
 listen('click', stephButton, () => {
