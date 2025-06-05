@@ -60,17 +60,6 @@ const davesArticle = select('.daves');
 /*----------------------------------------------------------->
 	Listeners 
 <-----------------------------------------------------------*/
-const scrollWrapper = select('.scroll-wrapper');
-
-listen('scroll', scrollWrapper, () => {
-  const { scrollTop, scrollHeight, clientHeight } = scrollWrapper;
-  const isAtBottom = scrollTop + clientHeight >= scrollHeight - 100;
-  if (isAtBottom) {
-    navBar.classList.add('visible');
-  } else {
-    navBar.classList.remove('visible');
-  }
-});
 let castIsOpen = false;
 let crewIsOpen = false;
 
