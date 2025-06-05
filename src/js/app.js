@@ -190,13 +190,13 @@ listen('click', rickButton, () => {
     rickArticle.classList.remove('collapse');
   }
 });
-listen('click', chantalButton, () => {
-  if(!chantalArticle.classList.contains('collapse')) {
-    chantalArticle.classList.add('collapse');
-  } else {
-    chantalArticle.classList.remove('collapse');
-  }
-});
+// listen('click', chantalButton, () => {
+//   if(!chantalArticle.classList.contains('collapse')) {
+//     chantalArticle.classList.add('collapse');
+//   } else {
+//     chantalArticle.classList.remove('collapse');
+//   }
+// });
 listen('click', davesButton, () => {
   if(!davesArticle.classList.contains('collapse')) {
     davesArticle.classList.add('collapse');
