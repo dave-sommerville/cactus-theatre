@@ -237,7 +237,9 @@ nav {
 		margin: 0 auto;
 	}
 }
-
+	.dates-wrapper {
+		width: 300px;
+	}
 .program-wrapper {
 	display: flex;
 	gap: 10px;
@@ -305,7 +307,7 @@ main {
 }
 .jordan, .hope, .natalie, .connor, .shane, 
 .steph, .alison, .julia, .heather, .bernard, .davep, .rick, .chantal, .daves {
-	height: 600px;
+	height: 700px;
 	overflow: hidden;
 	transition: all 0.5s ease-in-out;
 }
@@ -368,6 +370,11 @@ main {
   border-radius: 8px;
 }
 
+.photo-title {
+	text-align: center;
+	font-size: 2rem;
+
+}
 
 @media (max-width: 1200px) {
 	body{ 
@@ -397,6 +404,7 @@ main {
 			font-size: 1.2rem;
 		}
 	}
+
 }
 
 @media (max-width: 700px) {
@@ -414,9 +422,6 @@ main {
 	}
 	.link-wrapper {
 	width: 200px;
-	}
-	.dates-wrapper {
-		width: 300px;
 	}
 	.jordan, .hope, .natalie, .connor, .shane, 
 .steph, .alison, .julia, .heather, .bernard, .davep, .rick, .chantal, .daves {
