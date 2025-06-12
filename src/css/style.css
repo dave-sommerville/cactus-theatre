@@ -105,7 +105,6 @@ h4 {
 	width: 100%;
 	background: var(--clr-background) url('../img/cactus-logo-bg.PNG') no-repeat center bottom;
 	background-size: contain;
-	/* position:relative; */
 	justify-content: center;
 	align-items: center;
 	scroll-snap-align: start;
@@ -174,7 +173,10 @@ button:hover {
 	height: 80px;
 	align-items: center;
 }
-
+.logo-wrapper {
+	height: 8svh;
+	line-height: 8svh;
+}
 nav {
 	width: 100%;
 	height: 8svh;
@@ -184,8 +186,12 @@ nav {
 	justify-content: space-between;
   color: var(--clr-primary);
 	h3 {
-		font-size: 2.4rem;
+		font-size: 2rem;
 	}
+}
+
+.memory-card {
+	width: min(100% - 30px, 400px);
 }
 
 .small-logo-wrapper {
@@ -382,13 +388,13 @@ main {
 	}
 	nav {
 		h3 {
-			font-size: 1.7;
+			font-size: 1.7rem;
 		}
 	}
 	.link-wrapper  {
 		width: 250px;
 		a {
-			font-size: 1.4rem;
+			font-size: 1.2rem;
 		}
 }
 
@@ -401,7 +407,7 @@ main {
 	.link-wrapper  {
 		width: 250px;
 			a {
-			font-size: 1.2rem;
+			font-size: 1rem;
 		}
 	}
 
@@ -414,14 +420,17 @@ main {
 	nav {
 		padding: 0;
 	 	h3 {
-			font-size: 1.4rem;
+			font-size: 1.3rem;
 		}
 	}
 	.photo-columns {
 		column-count: 2;
 	}
 	.link-wrapper {
-	width: 200px;
+	width: 230px;
+	div {
+		width: 60px;
+	}
 	}
 	.jordan, .hope, .natalie, .connor, .shane, 
 .steph, .alison, .julia, .heather, .bernard, .davep, .rick, .chantal, .daves {
@@ -436,7 +445,7 @@ main {
 		flex-direction: column;
 	}
 	nav h3 {
-		font-size: 1.3rem;
+		font-size: 1.2rem;
 	}
 	.small-logo-wrapper {
 		margin-right: 5px;
