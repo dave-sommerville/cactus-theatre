@@ -132,7 +132,6 @@ h4 {
 }
 
 button {
-		margin: 50px;
 		height: 50px;
 		width: fit-content;
 		padding: 0 10px;
@@ -266,6 +265,10 @@ main {
 }
 .button-wrapper {
 	margin: 50px 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
 }
 
 .cast, .crew {
@@ -363,7 +366,7 @@ main {
 }
 
 .photo-columns {
-	background-color: antiquewhite;
+	background-color: #faebd7;
   column-count: 3;
   column-gap: 16px;
   padding: 15px 50px;
@@ -382,6 +385,14 @@ main {
 
 }
 
+.memories, .photo-wrapper {
+	background-color: #30378b;
+
+	section {
+		background-color: #faebd7;
+	}
+}
+
 @media (max-width: 1200px) {
 	body{ 
 		background-color: #faebd7;
@@ -396,12 +407,12 @@ main {
 		a {
 			font-size: 1.2rem;
 		}
+	}
 }
-
 @media (max-width: 850px) {
 	nav {
 		h3 {
-			font-size: 1.7rem;
+			font-size: 1.6rem;
 		}
 	}
 	.link-wrapper  {
@@ -477,18 +488,20 @@ main {
 	.cast p, .crew p {
 		width: 300px;
 	}
+	.location {
+		display: flex;
+		flex-direction: column;
+		span {
+			display: block;
+		}
+		.dash {
+			display: none;
+		}
+	}
+}
+
+@media(max-width: 580px) {
 		.photo-columns {
-		column-count: 2;
+		column-count: 1;
 	}
-}
-.location {
-	display: flex;
-	flex-direction: column;
-	span {
-		display: block;
-	}
-	.dash {
-		display: none;
-	}
-}
 }
