@@ -24,6 +24,7 @@ const linkWrapper = select('.link-wrapper');
 const navTitle = select('h3');
 const container = select(".scroll-container");
 const menuToggle = select('.burger-menu');
+const menuClose = select('.menu-close');
 const castButton = select('.cast-btn');
 const castDisplay = select('.cast');
 const crewDisplay = select('.crew');
@@ -66,7 +67,9 @@ let crewIsOpen = false;
 listen('click', menuToggle, ()=>{
   linkWrapper.classList.toggle('visible');
 });
-
+listen('click', menuClose, ()=>{
+  linkWrapper.classList.toggle('visible');
+});
 listen('click', castButton, () => {
   if(!castDisplay.classList.contains('collapse')) {
     castDisplay.classList.add('collapse');

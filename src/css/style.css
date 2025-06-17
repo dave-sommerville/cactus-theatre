@@ -25,7 +25,7 @@ body {
 <------------------------------------------------------------*/
 
 :root {
-	--clr-background: #30378b;
+	--clr-background: rgb(48, 55, 139);
 	--clr-primary: #012;
 	--clr-seconardy: #4e2;
 	--clr-accent: #d1b;
@@ -81,8 +81,10 @@ body {
 	justify-content: center;
 }
 .sp-even {
-	width: 100px;
 	justify-content: space-evenly;
+}
+.w-100 {
+	width: 100%;
 }
 .fifty-w {
 	flex: 1;
@@ -133,7 +135,7 @@ h4 {
 
 button {
 		height: 50px;
-		width: fit-content;
+		width: 100px;
 		padding: 0 10px;
 		border-radius: var(--app-bdr-rad);
 		font-size: 1rem;
@@ -164,14 +166,11 @@ button:hover {
 	height: 8svh;
 	background-color: antiquewhite;
 	position: sticky;
+	box-shadow: 0 1px 3px #00113350;
 	top: 0;
   z-index: 1000;
 }
 
-.link-wrapper {
-	height: 80px;
-	align-items: center;
-}
 .logo-wrapper {
 	height: 8svh;
 	line-height: 8svh;
@@ -203,19 +202,62 @@ nav {
 		aspect-ratio: 1 / 1;
 	}
 }
-.burger-menu {
+/* .burger-menu {
 	display: none;
-}
+} */
+
 .link-wrapper {
-  width: 320px;
 	align-items: center;
 	display: flex;
-  justify-content: space-evenly;
-  transition: all 0.5s ease-in-out;
-  a {
-  font-size: 1.6rem;
+	justify-content: space-evenly;
+	height: 320px;
+	width: 200px;
+	flex-direction: column;
+	position: absolute;
+	right: -15px;
+	top: 0;
+	z-index: 0;
+	overflow: hidden;
+	background-color: #faebd7;
+		box-shadow: 0 2px 3px #00113350;
+		/* transform: translateY(-320px); */
+		height: 0;
+	transition: all 0.5s ease-in-out;
+	a, li div i {
+		font-size: 1.6rem;
+	}
+	button {
+		width: 35px;
+		height: 35px;
+		line-height: 35px;
+		text-align: center;
+		
 	}
 }
+.link-wrapper.visible {
+	/* transform: translateY(0); */
+	height: 320px;
+}
+.flex-end {
+	align-self: flex-end;
+	margin-right: 10px;
+}
+/* .link-wrapper::after{
+	content: "";
+	height: 4svh;
+	width: inherit;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2000;
+	background-color: #faebd7;
+} */
+
+
+.link-wrapper.visible {
+	display: flex;
+}
+
 .dates-wrapper {
 	width: 400px;
 	justify-content: space-between;
@@ -265,8 +307,8 @@ main {
 }
 .button-wrapper {
 	margin: 50px 0;
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+  grid-template-columns: repeat(4, 1fr);
 	justify-content: center;
 	gap: 10px;
 }
@@ -402,12 +444,6 @@ main {
 			font-size: 1.7rem;
 		}
 	}
-	.link-wrapper  {
-		width: 250px;
-		a {
-			font-size: 1.2rem;
-		}
-	}
 }
 @media (max-width: 850px) {
 	nav {
@@ -415,13 +451,6 @@ main {
 			font-size: 1.6rem;
 		}
 	}
-	.link-wrapper  {
-		width: 250px;
-			a {
-			font-size: 1rem;
-		}
-	}
-
 }
 
 @media (max-width: 700px) {
@@ -437,11 +466,8 @@ main {
 	.photo-columns {
 		column-count: 2;
 	}
-	.link-wrapper {
-	width: 230px;
-	div {
-		width: 60px;
-	}
+	.button-wrapper {
+		grid-template-columns: repeat(2, 1fr);
 	}
 	.jordan, .hope, .natalie, .connor, .shane, 
 .steph, .alison, .julia, .heather, .bernard, .davep, .rick, .chantal, .daves {
@@ -462,25 +488,17 @@ main {
 		margin-right: 5px;
 		height: 50px;
 	}
-	.burger-menu {
+	/* .burger-menu {
 		display: block;
-	}
-	.sp-even {
-		width: 100%;
-	}
+	} */
 	.link-wrapper {
-		height: 200px;
-		width: 200px;
-		flex-direction: column;
-		position: absolute;
-		right: 0;
-		top: 8svh;
-		background-color: #faebd7;
-		padding: 0 var(--app-padding);
-		display: none;
+		width: 140px;
+		a, li div i {
+			font-size: 1.1rem;
+		}
 	}
 	.link-wrapper.visible {
-		display: flex;
+		height: 230px;
 	}
 	.dates-wrapper {
 		width: 260px;
