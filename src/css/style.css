@@ -136,7 +136,7 @@ h4 {
 	}
 }
 
-button {
+button, .btn {
 		height: 50px;
 		width: 100px;
 		padding: 0 10px;
@@ -147,8 +147,13 @@ button {
 		transition: all 0.25s ease-in-out;
 		cursor: pointer;
 }
-
-button:hover {
+.btn {
+	line-height: 50px;
+	width: fit-content;
+	margin-bottom: 50px;
+	margin-top: 10px;
+}
+button:hover, .btn:hover{
 	filter: brightness(0.7);
 }
 
@@ -264,7 +269,6 @@ nav {
 .dates-wrapper {
 	width: 400px;
 	justify-content: space-between;
-	margin-bottom: 50px;
 }
 .location {
 	display: inline-block;
@@ -395,10 +399,13 @@ main {
 }
 
 .about-main {
+	height: 92svh;
+	overflow-y: scroll;
 }
 .about-wrapper {
-	height: 92svh;
-	width: 60svw;
+	padding: 100px;
+	font-size: 1.2rem;
+	height: fit-content;
 }
 
 .dan-photo {
@@ -488,10 +495,13 @@ main {
 	.button-wrapper {
 		grid-template-columns: repeat(2, 1fr);
 	}
-	.jordan, .hope, .natalie, .connor, .shane, 
+	.jordan, .hope, .natalie, .connor, .shane, .gilmour,
 .steph, .alison, .julia, .heather, .bernard, .davep, .rick, .chantal, .daves {
 	height: 1000px;
 	}
+}
+.cactus {
+	height: 1200px;
 }
 @media (max-width: 620px) {
 	main {
@@ -539,10 +549,16 @@ main {
 		padding: 0;
 		font-size: 1rem;
 	}
+	.about-wrapper {
+		padding: 25px;
+	}
 }
 
 @media(max-width: 580px) {
-		.photo-columns {
+	.photo-columns {
 		column-count: 1;
+	}
+	.about-wrapper {
+		font-size: 1rem;
 	}
 }

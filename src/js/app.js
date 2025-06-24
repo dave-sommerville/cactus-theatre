@@ -139,14 +139,18 @@ listen('click', shaneButton, () => {
   }
 });
 listen('click', cactusButton, () => {
-  if(!cactusArticle.classList.contains('collapse')) {
-    cactusArticle.classList.add('collapse');
-  } else {
+  const isCollapsed = cactusArticle.classList.contains('collapse');
+  
+  if (isCollapsed) {
     cactusArticle.classList.remove('collapse');
-    window.scrollTo({
-      top: cactusButton.offsetBottom,
-      behavior: "smooth" // optional
-    });
+    
+    // Wait for the transition to finish before scrolling
+    setTimeout(() => {
+      cactusArticle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 500); // match your CSS transition duration (0.5s)
+    
+  } else {
+    cactusArticle.classList.add('collapse');
   }
 });
 listen('click', gilmourButton, () => {
@@ -213,16 +217,21 @@ listen('click', rickButton, () => {
 //   }
 // });
 listen('click', davesButton, () => {
-  if(!davesArticle.classList.contains('collapse')) {
-    davesArticle.classList.add('collapse');
-  } else {
+  const isCollapsed = davesArticle.classList.contains('collapse');
+  
+  if (isCollapsed) {
     davesArticle.classList.remove('collapse');
+    
+    // Wait for the transition to finish before scrolling
+    setTimeout(() => {
+      davesArticle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 500); // match your CSS transition duration (0.5s)
+    
+  } else {
+    davesArticle.classList.add('collapse');
   }
-    window.scrollTo({
-      top: davesButton.offsetBottom,
-      behavior: "smooth" // optional
-    });
 });
+
 
 // listen("scroll", window, () => {
 // 	const trigger = window.scrollY;
