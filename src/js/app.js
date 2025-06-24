@@ -39,6 +39,10 @@ const natalieArticle = select('.natalie');
 const natalieButton = select('.natalie-btn');
 const shaneArticle = select('.shane');
 const shaneButton = select('.shane-btn');
+const cactusArticle = select('.cactus');
+const cactusButton = select('.cactus-btn');
+const gilmourArticle = select('.gilmour');
+const gilmourButton = select('.gilmour-btn');
 const stephButton = select('.steph-btn');
 const stephArticle = select('.steph');
 const alisonButton = select('.alison-btn');
@@ -132,10 +136,24 @@ listen('click', shaneButton, () => {
     shaneArticle.classList.add('collapse');
   } else {
     shaneArticle.classList.remove('collapse');
+  }
+});
+listen('click', cactusButton, () => {
+  if(!cactusArticle.classList.contains('collapse')) {
+    cactusArticle.classList.add('collapse');
+  } else {
+    cactusArticle.classList.remove('collapse');
     window.scrollTo({
-      top: shaneButton.offsetBottom,
+      top: cactusButton.offsetBottom,
       behavior: "smooth" // optional
     });
+  }
+});
+listen('click', gilmourButton, () => {
+  if(!gilmourArticle.classList.contains('collapse')) {
+    gilmourArticle.classList.add('collapse');
+  } else {
+    gilmourArticle.classList.remove('collapse');
   }
 });
 listen('click', stephButton, () => {
@@ -200,6 +218,10 @@ listen('click', davesButton, () => {
   } else {
     davesArticle.classList.remove('collapse');
   }
+    window.scrollTo({
+      top: davesButton.offsetBottom,
+      behavior: "smooth" // optional
+    });
 });
 
 // listen("scroll", window, () => {
