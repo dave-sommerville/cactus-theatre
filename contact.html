@@ -19,43 +19,66 @@
   <script src="./src/js/contact.js" defer></script>  
 </head>
 <body>
-    <header class="nav-wrapper">
-      <div class="hero-banner hidden"></div>
-      <nav class="container flex">
-        <div class="flex">
-          <div class="small-logo-wrapper">
-            <img src="./src/img/cactus-logo.JPG">
-          </div>
-          <h3>
-            Cactus Theatre Co.
-          </h3>
-        </div>
-        <div class="burger-menu pointer hover">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-        <div class="link-wrapper flex">
-          <a href="./index.html" class="pointer">
-            Home
-          </a>
-          <a href="./about.html" class="pointer">
-            About
-          </a>
-          <div class="flex sp-even">
-
-            <a href="https://www.facebook.com/share/15sBvcSryf/?mibextid=wwXIfr" class="pointer">
-              <i class="fa-brands fa-square-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/cactus.theatre.co?igsh=MTQ5ZDQ5azZiZmowNw==" class="pointer">
-              <i class="fa-brands fa-square-instagram"></i>
-            </a>
-            <a href="https://www.youtube.com/@CactusTheatreCo">
-              <i class="fa-brands fa-youtube"></i>
-            </a>
-          </div>
-        </div>
-      </nav>
-  </header>
   <main class="container about-main f-col">
+          <section class="nav-wrapper one">
+        <nav class="container flex">
+          <div class="flex center">
+            <figure class="small-logo-wrapper">
+              <img src="./src/img/cactus-logo.JPG">
+            </figure>
+            <h3>
+              Cactus Theatre Co.
+            </h3>
+          </div>
+          <div class="burger-menu pointer hover">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <ul class="link-wrapper">
+            <li class="flex-end">
+              <button class="hover menu-close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </li>
+            <li>
+              <a href="./index.html" class="pointer hover">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="./about.html" class="pointer hover">
+                About
+              </a>
+            </li>
+            <li>
+            <a href="" class="hover">
+                Past Shows
+              </a>
+            </li>
+            <li class="w-100">
+              <div class="flex sp-even">
+                <a 
+                  href="https://www.facebook.com/share/15sBvcSryf/?mibextid=wwXIfr" 
+                  class="pointer hover"
+                  target="_blank">
+                  <i class="fa-brands fa-square-facebook"></i>
+                </a>
+                <a 
+                href="https://www.instagram.com/cactus.theatre.co?igsh=MTQ5ZDQ5azZiZmowNw==" 
+                class="pointer hover"
+                target="_blank">
+                  <i class="fa-brands fa-square-instagram"></i>
+                </a>
+                <a 
+                  href="https://www.youtube.com/@CactusTheatreCo" class="pointer hover"
+                  target="_blank">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
     <form class="message" name="contact" method="POST" data-netlify="true">
       <h5>Send Us a Message</h5>
       <input type="hidden" name="form-name" value="contact">

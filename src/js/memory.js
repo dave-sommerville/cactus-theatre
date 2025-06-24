@@ -16,14 +16,17 @@ function listen(event, element, callback) {
 /*----------------------------------------------------------->
 	Selectors 
 <------------------------------------------------------------*/
-
+const menuClose = select('.menu-close');
 const menuToggle = select('.burger-menu');
-const menuDropDown = select('.link-wrapper');
+const linkWrapper = select('.link-wrapper');
 /*----------------------------------------------------------->
 	Listeners 
 <-----------------------------------------------------------*/
-
-
 listen('click', menuToggle, ()=>{
-  menuDropDown.classList.toggle('visible');
+  linkWrapper.classList.toggle('visible');
 });
+listen('click', menuClose, ()=>{
+  linkWrapper.classList.toggle('visible');
+});
+
+

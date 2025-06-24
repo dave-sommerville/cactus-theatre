@@ -357,14 +357,12 @@ main {
 		width: 400px;
 	}
 }
-.memories {
-	figure {
+.memory-figure {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-	}
 	figcaption {
 		width: min(100% - 30px, 500px);
 		margin: 25px 0;
