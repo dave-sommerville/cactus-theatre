@@ -399,14 +399,14 @@ main {
 		text-align: center;
 	}
 }
-.jordan, .hope, .natalie, .connor, .shane, .cactus,
+.jordan, .hope, .natalie, .connor, .shane,
 .gilmour, .steph, .alison, .julia, .heather, .bernard, .davep, .rick, .chantal, .daves {
 	height: 700px;
 	overflow: hidden;
 	transition: all 0.5s ease-in-out;
 }
 .cactus {
-	height: 900px;
+	height: 1200px;
 	overflow: hidden;
 	transition: all 0.5s ease-in-out;
 }
@@ -529,7 +529,7 @@ main {
 	}
 }
 .cactus {
-	height: 1200px;
+	height: 1600px;
 }
 @media (max-width: 620px) {
 	main {
