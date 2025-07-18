@@ -150,13 +150,16 @@ button, .btn {
 .btn {
 	line-height: 50px;
 	width: fit-content;
-	margin-bottom: 50px;
-	margin-top: 10px;
+	margin: 10px 0;
 }
 button:hover, .btn:hover{
 	filter: brightness(0.7);
 }
-
+.btn.secondary {
+	background-color: transparent;
+	border: solid 2px var(--clr-background);
+	color: var(--clr-background);
+}
 .logo-container {
 	height: 250px;
 	width: 250px;
