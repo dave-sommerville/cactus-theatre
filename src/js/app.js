@@ -29,38 +29,14 @@ const castButton = select('.cast-btn');
 const castDisplay = select('.cast');
 const crewDisplay = select('.crew');
 const crewButton = select('.crew-btn');
-const jordanArticle = select('.jordan');
-const jordanButton = select('.jordan-btn');
 const hopeArticle = select('.hope');
 const hopeButton = select('.hope-btn');
-const connorArticle = select('.connor');
-const connorButton = select('.connor-btn');
-const natalieArticle = select('.natalie');
-const natalieButton = select('.natalie-btn');
-const shaneArticle = select('.shane');
-const shaneButton = select('.shane-btn');
-const cactusArticle = select('.cactus');
-const cactusButton = select('.cactus-btn');
-const gilmourArticle = select('.gilmour');
-const gilmourButton = select('.gilmour-btn');
 const stephButton = select('.steph-btn');
 const stephArticle = select('.steph');
-const alisonButton = select('.alison-btn');
-const alisonArticle = select('.alison');
-const juliaButton = select('.julia-btn');
-const juliaArticle = select('.julia');
-const heatherButton = select('.heather-btn');
-const heatherArticle = select('.heather');
-const bernardButton = select('.bernard-btn');
-const bernardArticle = select('.bernard');
-const davepButton = select('.davep-btn');
-const davepArticle = select('.davep');
-const rickButton = select('.rick-btn');
-const rickArticle = select('.rick');
-const chantalButton = select('.chantal-btn');
-const chantalArticle = select('.chantal');
-const davesButton = select('.daves-btn');
-const davesArticle = select('.daves');
+const daveButton = select('.dave-btn');
+const daveArticle = select('.dave');
+const eveButton = select('.eve-btn');
+const eveArticle = select('.eve');
 
 /*----------------------------------------------------------->
 	Listeners 
@@ -102,149 +78,55 @@ listen('click', crewButton, () => {
   }
 });
 
-listen('click', jordanButton, () => {
-  if(!jordanArticle.classList.contains('collapse')) {
-    jordanArticle.classList.add('collapse');
+// Cast
+listen('click', eveButton, () => {
+  if(!eveArticle.classList.contains('collapse')) {
+    eveArticle.classList.add('collapse');
   } else {
-    jordanArticle.classList.remove('collapse');
-    jordanArticle.scrollIntoView({ behavior: "smooth" });
+    eveArticle.classList.remove('collapse');
   }
 });
+// Bottom of Cast
+listen('click', daveButton, () => {
+  const isCollapsed = daveArticle.classList.contains('collapse');
+  
+  if (isCollapsed) {
+    daveArticle.classList.remove('collapse');
+    
+    // Wait for the transition to finish before scrolling
+    setTimeout(() => {
+      daveArticle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 500); // match your CSS transition duration (0.5s)
+    
+  } else {
+    daveArticle.classList.add('collapse');
+  }
+});
+// Crew
 listen('click', hopeButton, () => {
-  if(!hopeArticle.classList.contains('collapse')) {
-    hopeArticle.classList.add('collapse');
-  } else {
+  const isCollapsed = hopeArticle.classList.contains('collapse');
+  if (isCollapsed) {
     hopeArticle.classList.remove('collapse');
-  }
-});
-listen('click', natalieButton, () => {
-  if(!natalieArticle.classList.contains('collapse')) {
-    natalieArticle.classList.add('collapse');
-  } else {
-    natalieArticle.classList.remove('collapse');
-  }
-});
-listen('click', connorButton, () => {
-  if(!connorArticle.classList.contains('collapse')) {
-    connorArticle.classList.add('collapse');
-  } else {
-    connorArticle.classList.remove('collapse');
-  }
-});
-listen('click', shaneButton, () => {
-  if(!shaneArticle.classList.contains('collapse')) {
-    shaneArticle.classList.add('collapse');
-  } else {
-    shaneArticle.classList.remove('collapse');
-  }
-});
-listen('click', cactusButton, () => {
-  const isCollapsed = cactusArticle.classList.contains('collapse');
-  
-  if (isCollapsed) {
-    cactusArticle.classList.remove('collapse');
-    
     // Wait for the transition to finish before scrolling
     setTimeout(() => {
-      cactusArticle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      hopeArticle.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 500); // match your CSS transition duration (0.5s)
-    
   } else {
-    cactusArticle.classList.add('collapse');
+    hopeArticle.classList.add('collapse');
   }
 });
-listen('click', gilmourButton, () => {
-  if(!gilmourArticle.classList.contains('collapse')) {
-    gilmourArticle.classList.add('collapse');
-  } else {
-    gilmourArticle.classList.remove('collapse');
-  }
-});
+
+// Bottom of crew
 listen('click', stephButton, () => {
-  if(!stephArticle.classList.contains('collapse')) {
-    stephArticle.classList.add('collapse');
-  } else {
-    stephArticle.classList.remove('collapse');
-  }
-});
-listen('click', alisonButton, () => {
-  if(!alisonArticle.classList.contains('collapse')) {
-    alisonArticle.classList.add('collapse');
-  } else {
-    alisonArticle.classList.remove('collapse');
-  }
-});
-listen('click', juliaButton, () => {
-  if(!juliaArticle.classList.contains('collapse')) {
-    juliaArticle.classList.add('collapse');
-  } else {
-    juliaArticle.classList.remove('collapse');
-  }
-});
-listen('click', heatherButton, () => {
-  if(!heatherArticle.classList.contains('collapse')) {
-    heatherArticle.classList.add('collapse');
-  } else {
-    heatherArticle.classList.remove('collapse');
-  }
-});
-listen('click', bernardButton, () => {
-  if(!bernardArticle.classList.contains('collapse')) {
-    bernardArticle.classList.add('collapse');
-  } else {
-    bernardArticle.classList.remove('collapse');
-  }
-});
-listen('click', davepButton, () => {
-  if(!davepArticle.classList.contains('collapse')) {
-    davepArticle.classList.add('collapse');
-  } else {
-    davepArticle.classList.remove('collapse');
-  }
-});
-listen('click', rickButton, () => {
-  if(!rickArticle.classList.contains('collapse')) {
-    rickArticle.classList.add('collapse');
-  } else {
-    rickArticle.classList.remove('collapse');
-  }
-});
-// listen('click', chantalButton, () => {
-//   if(!chantalArticle.classList.contains('collapse')) {
-//     chantalArticle.classList.add('collapse');
-//   } else {
-//     chantalArticle.classList.remove('collapse');
-//   }
-// });
-listen('click', davesButton, () => {
-  const isCollapsed = davesArticle.classList.contains('collapse');
-  
+  const isCollapsed = stephArticle.classList.contains('collapse');
   if (isCollapsed) {
-    davesArticle.classList.remove('collapse');
-    
+    stephArticle.classList.remove('collapse');
     // Wait for the transition to finish before scrolling
     setTimeout(() => {
-      davesArticle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      stephArticle.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 500); // match your CSS transition duration (0.5s)
-    
   } else {
-    davesArticle.classList.add('collapse');
+    stephArticle.classList.add('collapse');
   }
 });
-
-
-// listen("scroll", window, () => {
-// 	const trigger = window.scrollY;
-
-// 	if (trigger >= (headerSwitch - 15)) {
-// 		navBar.classList.add("visible");
-// 	} else {
-// 		navBar.classList.remove("visible");
-// 	}
-// });
-
-// listen('click', burgerMenu, () => {
-// 	linkWrapper.classList.toggle("visible");
-//   navTitle.classList.toggle("visible");
-// });
 

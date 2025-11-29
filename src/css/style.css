@@ -160,6 +160,23 @@ button:hover, .btn:hover{
 	border: solid 2px var(--clr-background);
 	color: var(--clr-background);
 }
+.coming-soon {
+	position: relative;
+}
+.coming-soon::after {
+	content: 'Coming Soon';
+	font-size: 1rem;
+	position: absolute;
+	text-align: center;
+	top: -10px;
+	right: -80px;
+	width: 160px;
+	height: 30px;
+	line-height: 30px;
+	background-color: var(--clr-accent);
+	border-radius: var(--app-bdr-rad);
+}
+
 .logo-container {
 	height: 250px;
 	width: 250px;
@@ -197,6 +214,9 @@ nav {
 	h3 {
 		font-size: 2rem;
 	}
+}
+article {
+	scroll-margin-top: 100px;
 }
 .memory-container {
 	display: flex;
@@ -358,6 +378,10 @@ main {
 	justify-content: center;
 	gap: 10px;
 }
+.siren.button-wrapper {
+	display: flex;
+	justify-content: center;
+}
 .cast-photo {
 	width: 400px;
 }
@@ -403,7 +427,7 @@ main {
 	}
 }
 .jordan, .hope, .natalie, .connor, .shane,
-.gilmour, .steph, .alison, .julia, .heather, .bernard, .davep, .rick, .chantal, .daves {
+.gilmour, .steph, .alison, .julia, .heather, .bernard, .davep, .rick, .chantal, .daves, .dave, .eve {
 	height: 700px;
 	overflow: hidden;
 	transition: all 0.5s ease-in-out;
@@ -415,7 +439,7 @@ main {
 }
 .jordan.collapse, .hope.collapse, .natalie.collapse, .connor.collapse, .shane.collapse, .cactus.collapse,
 .gilmour.collapse, .steph.collapse, .alison.collapse, .julia.collapse, .heather.collapse,
-.bernard.collapse, .davep.collapse, .rick.collapse, .chantal.collapse, .daves.collapse
+.bernard.collapse, .davep.collapse, .rick.collapse, .chantal.collapse, .daves.collapse, .dave.collapse, .eve.collapse
  {
 	height: 0;
 }
@@ -528,7 +552,10 @@ main {
 	}
 	.jordan, .hope, .natalie, .connor, .shane, .gilmour,
 .steph, .alison, .julia, .heather, .bernard, .davep, .rick, .chantal, .daves {
-	height: 1000px;
+		height: 1000px;
+	}
+	article {
+		scroll-margin-top: 50px;
 	}
 }
 .cactus {
