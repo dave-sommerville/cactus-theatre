@@ -163,19 +163,6 @@ button:hover, .btn:hover{
 .coming-soon {
 	position: relative;
 }
-.coming-soon::after {
-	content: 'Coming Soon';
-	font-size: 1rem;
-	position: absolute;
-	text-align: center;
-	top: -10px;
-	right: -80px;
-	width: 160px;
-	height: 30px;
-	line-height: 30px;
-	background-color: var(--clr-accent);
-	border-radius: var(--app-bdr-rad);
-}
 
 .logo-container {
 	height: 250px;
