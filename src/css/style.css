@@ -235,7 +235,19 @@ article {
 		}
 	}
 }
-
+.poster {
+	height: 500px;
+	display: flex;
+	width: 100%;
+	overflow: hidden;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 25px;
+	img {
+		height: 500px;
+		border-radius: var(--app-bdr-rad);
+	}
+}
 .memory-card {
 	width: min(100% - 30px, 400px);
 }
@@ -318,7 +330,7 @@ article {
 }
 
 .program {
-	padding: var(--app-padding);
+	padding: 10px;
 	background-color: antiquewhite;
 	h2, h4 {
 		text-align: center;
@@ -371,6 +383,7 @@ main {
 }
 .cast-photo {
 	width: 400px;
+	border-radius: var(--app-bdr-rad);
 }
 .cast, .crew {
 	transition: all 0.5s ease-in-out;
