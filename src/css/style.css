@@ -319,7 +319,6 @@ article {
 }
 
 .dates-wrapper {
-	width: 400px;
 	justify-content: space-between;
 }
 .location {
@@ -342,9 +341,7 @@ article {
 		margin: 0 auto;
 	}
 }
-	.dates-wrapper {
-		width: 300px;
-	}
+
 .program-wrapper {
 	display: flex;
 	gap: 10px;
@@ -586,9 +583,6 @@ main {
 	}
 	.link-wrapper.visible {
 		height: 230px;
-	}
-	.dates-wrapper {
-		width: 260px;
 	}
 	.cast p, .crew p {
 		width: 300px;
