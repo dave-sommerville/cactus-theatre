@@ -37,6 +37,8 @@ const daveButton = select('.dave-btn');
 const daveArticle = select('.dave');
 const eveButton = select('.eve-btn');
 const eveArticle = select('.eve');
+const davesButton = select('.daves-btn');
+const davesArticle = select('.daves');
 
 /*----------------------------------------------------------->
 	Listeners 
@@ -130,3 +132,18 @@ listen('click', stephButton, () => {
   }
 });
 
+listen('click', davesButton, () => {
+  const isCollapsed = davesArticle.classList.contains('collapse');
+  
+  if (isCollapsed) {
+    davesArticle.classList.remove('collapse');
+    
+    // Wait for the transition to finish before scrolling
+    setTimeout(() => {
+      davesArticle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 500); // match your CSS transition duration (0.5s)
+    
+  } else {
+    davesArticle.classList.add('collapse');
+  }
+});
